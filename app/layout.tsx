@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Footer from '@/components/ui/Footer';
 import Navbar from '@/components/ui/Navbar';
+import LeadDynoScript from '@/components/ui/LeadDynoScript';
 import { Toaster } from '@/components/ui/Toasts/toaster';
 import { PropsWithChildren, Suspense } from 'react';
 import { getURL } from '@/utils/helpers';
@@ -22,6 +23,9 @@ export const metadata: Metadata = {
 export default async function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
+      <head>
+        <LeadDynoScript />
+      </head>
       <body className="bg-black">
         <Navbar />
         <main
